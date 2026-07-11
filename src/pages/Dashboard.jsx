@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../App';
 
-const API = 'http://localhost:5000/api';
+const API = "https://skill-gap-analyzer-cwvf.onrender.com/api";
 
 const QUICK_SKILLS = ['HTML','CSS','JavaScript','TypeScript','React','Node.js','Express','MongoDB','Python','SQL','Git','Docker','AWS','React Native','Figma'];
 

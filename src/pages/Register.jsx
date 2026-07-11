@@ -23,9 +23,12 @@ export default function Register() {
       const { data } = await axios.post(`${API}/auth/register`, { name: form.name, email: form.email, password: form.password });
       login(data);
       navigate('/dashboard');
-    } catch (err) {
-      setError(err.response?.data?.message || 'Registration failed. Try again.');
-    } finally { setLoading(false); }
+    }catch (err) {
+  console.log(err.response?.data);
+  alert(JSON.stringify(err.response?.data));
+  setError(err.response?.data?.message || "Registration failed.");
+}
+   finally { setLoading(false); }
   };
 
   const strength = (() => {

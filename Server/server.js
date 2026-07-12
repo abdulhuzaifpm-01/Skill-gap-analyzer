@@ -8,7 +8,12 @@ const analyzerRoutes = require('./routes/analyzer');
 
 const app = express();
 
-app.use(cors());
+const cors = require("cors");
+
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes

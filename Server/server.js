@@ -10,9 +10,14 @@ const app = express();
 
 
 app.use(cors({
-  origin: true,
+  origin: [
+    "https://skill-gap-analyzer-1-uedw.onrender.com",
+    "http://localhost:3000"
+  ],
   credentials: true
 }));
+
+app.options("*", cors());
 app.use(express.json());
 
 // Routes
@@ -77,3 +82,4 @@ mongoose
     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   })
   .catch((err) => console.error('❌ MongoDB connection error:', err));
+s

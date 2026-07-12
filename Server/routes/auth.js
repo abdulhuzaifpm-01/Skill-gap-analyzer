@@ -35,8 +35,13 @@ router.post('/register', async (req, res) => {
       token: generateToken(user._id),
     });
   } catch (error) {
-    res.status(500).json({ message: 'Server error', error: error.message });
-  }
+  console.error("REGISTER ERROR:", error);
+
+  res.status(500).json({
+    message: "Server error",
+    error: error.message
+  });
+}
 });
 
 // @route   POST /api/auth/login

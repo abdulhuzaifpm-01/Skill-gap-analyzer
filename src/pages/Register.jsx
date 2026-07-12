@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../App';
 
-const API = "https://skill-gap-analyzer-cwvf.onrender.com/api";
+const API = "https://skill-gap-analyzer-cvvf.onrender.com/api";
 
 export default function Register() {
   const { login } = useAuth();

@@ -14,8 +14,12 @@ app.use(cors({
     "https://skill-gap-analyzer-1-uedw.onrender.com",
     "http://localhost:3000"
   ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
+
+app.options("*", cors());
 
 app.options("*", cors());
 app.use(express.json());
